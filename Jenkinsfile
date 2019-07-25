@@ -4,7 +4,10 @@ pipeline {
     stage('build') {
       steps {
         echo 'hello first message'
-        timestamps()
+        timestamps() {
+          pwd(tmp: true)
+        }
+
       }
     }
   }
